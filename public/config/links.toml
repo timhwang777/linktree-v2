@@ -1,0 +1,34 @@
+# User profile information
+[profile]
+name = "Yu-Cheng Hwang"
+avatar = "/images/avatar-turbobaba.jpeg"
+description = "Full-Stack Software Engineer & Learner"
+tagline = "Building products that make a difference"
+
+# Theme configuration
+[theme]
+useBackgroundImage = true
+backgroundImage = "/backgrounds/background.jpg"
+backgroundOverlayOpacity = 0.2
+backgroundBlur = 0.5
+
+# Social links - each link has a title, url, and icon
+[[links]]
+title = "Homepage"
+url = "https://ychwang.io"
+icon = "House"
+
+[[links]]
+title = "GitHub"
+url = "https://github.com/timhwang777"
+icon = "Github"
+
+[[links]]
+title = "LinkedIn"
+url = "https://linkedin.com/in/timhwang777"
+icon = "Linkedin"
+
+[[links]]
+title = "Contact Me"
+url = "mailto:careers@ychwang.io"
+icon = "Mail" 
