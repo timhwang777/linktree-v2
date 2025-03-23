@@ -83,6 +83,17 @@ function App() {
     }
   }, [data?.profile?.name]);
 
+  // Update preload image
+  useEffect(() => {
+    if (data?.theme?.backgroundImage) {
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.as = 'image';
+      preloadLink.href = data.theme.backgroundImage;
+      document.head.appendChild(preloadLink);
+    }
+  }, [data?.theme?.backgroundImage]);
+
   useEffect(() => {
     async function fetchData() {
       try {
