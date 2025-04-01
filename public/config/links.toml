@@ -7,8 +7,8 @@ tagline = "Building products that make a difference"
 
 # Theme configuration
 [theme]
-useBackgroundImage = true
-backgroundImage = "/backgrounds/background.webp"
+useBackgroundImage = false
+backgroundImage = "/backgrounds/"
 backgroundOverlayOpacity = 0.2
 backgroundBlur = 0.5
 
