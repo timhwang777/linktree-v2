@@ -23,4 +23,4 @@ export interface LinkTreeData {
   profile: Profile;
   links: Link[];
   theme?: ThemeConfig;
-} 
+}

@@ -8,31 +8,35 @@ import { Footer } from './components/footer';
 
 // Background component to handle theme-aware background image effects
 const ThemeBackground = ({ theme }: { theme: ThemeConfig }) => {
-  const { useBackgroundImage, backgroundImage, backgroundOverlayOpacity, backgroundBlur } = theme || {};
-  
+  const { useBackgroundImage, backgroundImage, backgroundOverlayOpacity, backgroundBlur } =
+    theme || {};
+
   // Early return if background image is disabled
   if (!useBackgroundImage) return null;
-  
+
   // Set CSS variables for the background image and add body class
   useEffect(() => {
     if (useBackgroundImage && backgroundImage) {
       // Preload the image
       const img = new Image();
       img.src = backgroundImage;
-      
+
       img.onload = () => {
         document.documentElement.style.setProperty('--bg-image', `url(${backgroundImage})`);
-        document.documentElement.style.setProperty('--bg-image-opacity', backgroundOverlayOpacity?.toString() || '0.2');
+        document.documentElement.style.setProperty(
+          '--bg-image-opacity',
+          backgroundOverlayOpacity?.toString() || '0.2'
+        );
         document.documentElement.style.setProperty('--bg-image-blur', `${backgroundBlur || 3}px`);
         document.body.classList.add('with-bg-image');
       };
     }
-    
+
     return () => {
       document.body.classList.remove('with-bg-image');
     };
   }, [useBackgroundImage, backgroundImage, backgroundOverlayOpacity, backgroundBlur]);
-  
+
   return (
     <div className="bg-image-container">
       <div className="bg-image"></div>
@@ -60,12 +64,8 @@ function ErrorState({ error }: { error: string }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
       <div className="max-w-md w-full p-6 rounded-lg border border-destructive/20 bg-card shadow-lg prose prose-lg dark:prose-invert">
-        <h2 className="font-display text-2xl font-bold text-destructive mb-4">
-          Error
-        </h2>
-        <p className="text-muted-foreground">
-          {error}
-        </p>
+        <h2 className="font-display text-2xl font-bold text-destructive mb-4">Error</h2>
+        <p className="text-muted-foreground">{error}</p>
       </div>
     </div>
   );
@@ -114,7 +114,7 @@ function App() {
     <div className="min-h-screen flex flex-col items-center bg-background text-foreground">
       {/* Theme-aware background */}
       {data?.theme && <ThemeBackground theme={data.theme} />}
-      
+
       {/* Theme toggle */}
       <div className="fixed top-4 right-4 z-10">
         <ThemeToggle />
@@ -135,11 +135,11 @@ function App() {
           ) : null}
         </main>
       </div>
-      
+
       {/* Footer component */}
       <div className="w-full flex justify-center">
         <div className="w-full max-w-md">
-          <Footer name={data?.profile?.name}/>
+          <Footer name={data?.profile?.name} />
         </div>
       </div>
     </div>

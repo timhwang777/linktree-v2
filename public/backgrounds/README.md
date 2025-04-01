@@ -3,9 +3,11 @@
 This folder contains the background image that will be used for your Link Tree application.
 
 ## About the Background Image
+
 - `background.jpg` - A single image that will adapt to both light and dark themes
 
 ## How It Works
+
 The application applies different visual effects to the same background image depending on the current theme:
 
 - **Light Theme**: The image appears brighter with a light overlay
@@ -20,8 +22,8 @@ The application applies different visual effects to the same background image de
 [theme]
 useBackgroundImage = true
 backgroundImage = "/backgrounds/your-custom-image.jpg"
-backgroundOverlayOpacity = 0.2  # 0-1 value (0 = transparent, 1 = opaque)
-backgroundBlur = 3  # blur in pixels
+backgroundOverlayOpacity = 0.2                         # 0-1 value (0 = transparent, 1 = opaque)
+backgroundBlur = 3                                     # blur in pixels
 ```
 
 ## Recommended Image Specifications
@@ -39,4 +41,4 @@ To disable the background image, set `useBackgroundImage = false` in your config
 ```toml
 [theme]
 useBackgroundImage = false
-``` 
+```

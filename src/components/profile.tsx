@@ -1,5 +1,5 @@
-import { Profile as ProfileType } from "@/types";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Profile as ProfileType } from '@/types';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 interface ProfileProps {
   profile: ProfileType;
@@ -10,9 +10,9 @@ export function Profile({ profile }: ProfileProps) {
 
   // Create initials from name for avatar fallback
   const initials = name
-    .split(" ")
-    .map((n) => n[0])
-    .join("")
+    .split(' ')
+    .map(n => n[0])
+    .join('')
     .toUpperCase()
     .substring(0, 2);
 
@@ -22,10 +22,10 @@ export function Profile({ profile }: ProfileProps) {
         <AvatarImage src={avatar} alt={name} />
         <AvatarFallback className="text-2xl">{initials}</AvatarFallback>
       </Avatar>
-      
+
       <h1 className="text-4xl font-bold mb-1">{name}</h1>
       <p className="text-muted-foreground mb-2">{description}</p>
       <p className="max-w-lg text-sm">{tagline}</p>
     </div>
   );
-} 
+}

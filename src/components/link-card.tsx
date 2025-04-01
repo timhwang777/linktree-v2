@@ -1,7 +1,7 @@
-import { Link } from "@/types";
-import { Button } from "@/components/ui/button";
-import * as LucideIcons from "lucide-react";
-import { Link as LinkIcon } from "lucide-react";
+import { Link } from '@/types';
+import { Button } from '@/components/ui/button';
+import * as LucideIcons from 'lucide-react';
+import { Link as LinkIcon } from 'lucide-react';
 
 interface LinkCardProps {
   link: Link;
@@ -9,7 +9,7 @@ interface LinkCardProps {
 
 export function LinkCard({ link }: LinkCardProps) {
   const { title, url, icon } = link;
-  
+
   // Get the icon component or use a default
   let IconComponent: React.ElementType = LinkIcon;
 
@@ -23,12 +23,7 @@ export function LinkCard({ link }: LinkCardProps) {
   }
 
   return (
-    <a 
-      href={url} 
-      target="_blank" 
-      rel="noopener noreferrer"
-      className="w-full block no-underline"
-    >
+    <a href={url} target="_blank" rel="noopener noreferrer" className="w-full block no-underline">
       <Button
         variant="outline"
         className="w-full flex items-center justify-start gap-3 py-6 px-4 transition-all hover:scale-[1.02] text-left"
@@ -38,4 +33,4 @@ export function LinkCard({ link }: LinkCardProps) {
       </Button>
     </a>
   );
-} 
+}

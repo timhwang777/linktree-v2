@@ -1,7 +1,7 @@
 @import url('https://rsms.me/inter/inter.css');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
@@ -9,9 +9,13 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-sans: 'Inter var', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-sans:
+    'Inter var', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
   --font-display: 'Cal Sans', var(--font-sans);
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  --font-mono:
+    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
@@ -45,7 +49,7 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
-  
+
   /* Background image variables */
   --bg-image-opacity: 1;
   --bg-image-blur: 3px;
@@ -54,7 +58,7 @@
   --bg-overlay-dark: rgba(0, 0, 0, 0.4);
   --card-rgb: 255, 255, 255;
   --foreground-rgb: 35, 35, 35;
-  
+
   /* Interactive element variables */
   --card-opacity: 0.5;
   --card-hover-opacity: 0.8;
@@ -200,7 +204,7 @@ body {
 
 /* Enhanced card styling for better readability with background images */
 .with-bg-image .bg-card,
-.with-bg-image [class*="bg-background"] {
+.with-bg-image [class*='bg-background'] {
   background-color: rgba(var(--card-rgb), var(--card-opacity)) !important;
   backdrop-filter: blur(4px);
   border: 1px solid var(--border);
@@ -228,7 +232,7 @@ body.with-bg-image .bg-background {
 }
 
 /* Fix pagination hover states with background image */
-.with-bg-image [role="navigation"] li a {
+.with-bg-image [role='navigation'] li a {
   background-color: rgba(var(--card-rgb), var(--card-opacity)) !important;
   backdrop-filter: blur(3px);
   transition: all 0.3s ease;
@@ -236,7 +240,7 @@ body.with-bg-image .bg-background {
   font-weight: 500;
 }
 
-.with-bg-image [role="navigation"] li a:hover:not([aria-disabled="true"]) {
+.with-bg-image [role='navigation'] li a:hover:not([aria-disabled='true']) {
   background-color: rgba(var(--card-rgb), var(--card-hover-opacity)) !important;
   transform: translateY(-1px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -244,7 +248,7 @@ body.with-bg-image .bg-background {
   text-shadow: 0 0 1px rgba(var(--foreground-rgb), 0.2);
 }
 
-.with-bg-image [role="navigation"] li a[aria-current="page"] {
+.with-bg-image [role='navigation'] li a[aria-current='page'] {
   background-color: var(--primary) !important;
   color: var(--primary-foreground) !important;
   border-color: var(--primary);
@@ -254,25 +258,25 @@ body.with-bg-image .bg-background {
 }
 
 /* Ensure pagination arrows remain visible */
-.with-bg-image [role="navigation"] li a svg {
+.with-bg-image [role='navigation'] li a svg {
   stroke-width: 2.5px;
   opacity: 0.9;
 }
 
 /* Dark mode adjustments for pagination */
-.dark .with-bg-image [role="navigation"] li a {
+.dark .with-bg-image [role='navigation'] li a {
   color: var(--foreground) !important;
   text-shadow: none;
 }
 
-.dark .with-bg-image [role="navigation"] li a:hover:not([aria-disabled="true"]) {
+.dark .with-bg-image [role='navigation'] li a:hover:not([aria-disabled='true']) {
   color: var(--foreground) !important;
   text-shadow: none;
   background-color: rgba(var(--card-rgb), var(--card-hover-opacity)) !important;
   transform: translateY(-1px);
 }
 
-.dark .with-bg-image [role="navigation"] li a[aria-current="page"] {
+.dark .with-bg-image [role='navigation'] li a[aria-current='page'] {
   background-color: var(--primary) !important;
   color: var(--background) !important;
   box-shadow: 0 0 0 1px var(--primary);

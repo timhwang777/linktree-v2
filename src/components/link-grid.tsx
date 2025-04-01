@@ -1,8 +1,8 @@
-import { useState } from "react";
-import ReactPaginate from "react-paginate";
-import { Link } from "@/types";
-import { LinkCard } from "@/components/link-card";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from 'react';
+import ReactPaginate from 'react-paginate';
+import { Link } from '@/types';
+import { LinkCard } from '@/components/link-card';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface LinkGridProps {
   links: Link[];
@@ -14,7 +14,7 @@ export function LinkGrid({ links, itemsPerPage = 5 }: LinkGridProps) {
 
   // Calculate total number of pages
   const pageCount = Math.ceil(links.length / itemsPerPage);
-  
+
   // Calculate the current items to display
   const offset = currentPage * itemsPerPage;
   const currentItems = links.slice(offset, offset + itemsPerPage);
@@ -22,7 +22,7 @@ export function LinkGrid({ links, itemsPerPage = 5 }: LinkGridProps) {
   // Handle page change
   const handlePageChange = (selectedItem: { selected: number }) => {
     setCurrentPage(selectedItem.selected);
-    
+
     // Scroll to top of grid on page change
     window.scrollTo({
       top: document.getElementById('link-grid')?.offsetTop || 0,
@@ -37,7 +37,7 @@ export function LinkGrid({ links, itemsPerPage = 5 }: LinkGridProps) {
           <LinkCard key={`${link.title}-${index}`} link={link} />
         ))}
       </div>
-      
+
       {pageCount > 1 && (
         <ReactPaginate
           previousLabel={<ChevronLeft className="h-4 w-4" />}
@@ -68,4 +68,4 @@ export function LinkGrid({ links, itemsPerPage = 5 }: LinkGridProps) {
       )}
     </div>
   );
-} 
+}

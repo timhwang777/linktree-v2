@@ -21,4 +21,4 @@ export async function loadLinkTreeConfig(): Promise<LinkTreeData> {
       links: [],
     };
   }
-} 
+}
