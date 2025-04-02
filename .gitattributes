@@ -1,3 +1,3 @@
 # Files or folders that differ between branches
-public/config/links.toml merge=theirs
-public/backgrounds/* merge=theirs
+public/config/links.toml merge=ours
+public/backgrounds/* merge=ours
