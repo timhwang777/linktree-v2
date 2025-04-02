@@ -1,9 +1,9 @@
 # User profile information
 [profile]
-name = "Yu-Cheng Hwang"
-avatar = "/images/avatar-turbobaba.jpeg"
-description = "Full-Stack Software Engineer & Learner"
-tagline = "Building products that make a difference"
+name = "First Last"
+avatar = "/images/"
+description = "Something"
+tagline = "Something"
 
 # Theme configuration
 [theme]
