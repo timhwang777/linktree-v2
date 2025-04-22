@@ -1,3 +1,11 @@
 # Files or folders that differ between branches
 public/config/links.toml merge=ours
 public/backgrounds/* merge=ours
+
+*.webp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.ico binary
