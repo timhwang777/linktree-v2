@@ -20,7 +20,7 @@ export function Footer({ name, className }: FooterProps) {
           <br />
           <span className="opacity-75">Open source on </span>
           <a
-            href="https://github.com/"
+            href="https://github.com/timhwang777"
             className="inline-flex items-center gap-1 font-medium text-primary hover:text-primary/80 transition-colors no-underline hover:underline"
             target="_blank"
             rel="noopener noreferrer"
